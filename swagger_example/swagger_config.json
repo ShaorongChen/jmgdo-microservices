@@ -5,7 +5,7 @@
       "title": "Task Organizer",
       "description": "Organize and maintain tasks"
     },
-    "host": "<Your application URL>",
+    "host": "csrnfscourse-5000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai",
     "paths": {
       "/tasks": {
         "get": {
