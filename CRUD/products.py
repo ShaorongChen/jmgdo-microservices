@@ -12,11 +12,15 @@ products = [
 ]
 
 # Example request - http://localhost:5000/products
+
+
 @app.route('/products', methods=['GET'])
 def get_products():
     return jsonify(products)
 
 # Example request - http://localhost:5000/products/144 - with method GET
+
+
 @app.route('/products/<id>', methods=['GET'])
 def get_product(id):
     id = int(id)
@@ -24,12 +28,16 @@ def get_product(id):
     return jsonify(product)
 
 # Example request - http://localhost:5000/products - with method POST
+
+
 @app.route('/products', methods=['POST'])
 def add_product():
     products.append(request.get_json())
     return '', 201
 
 # Example request - http://localhost:5000/products/144 - with method PUT
+
+
 @app.route('/products/<id>', methods=['PUT'])
 def update_product(id):
     id = int(id)
@@ -40,6 +48,8 @@ def update_product(id):
     return '', 204
 
 # Example request - http://localhost:5000/products/144 - with method DELETE
+
+
 @app.route('/products/<id>', methods=['DELETE'])
 def remove_product(id):
     id = int(id)
@@ -47,4 +57,5 @@ def remove_product(id):
     products.remove(product)
     return '', 204
 
-app.run(port=5000,debug=True)
+
+app.run(port=5000, debug=True)
